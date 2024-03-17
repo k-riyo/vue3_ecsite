@@ -2,7 +2,9 @@
   "name": "vue3_ecsite",
   "version": "0.0.0",
   "scripts": {
+    "predev": "npm ci",
     "dev": "vite --host",
+    "prebuild": "npm ci",
     "build": "run-p type-check build-only",
     "preview": "vite preview",
     "test:unit": "vitest --environment jsdom --root src/",
@@ -11,6 +13,9 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@luchta-io/cuv": "^1.2.0-alpha.10",
+    "@mdi/js": "^7.4.47",
+    "firebase": "^10.8.1",
     "pinia": "^2.0.23",
     "vue": "^3.2.41",
     "vue-router": "^4.1.5"
