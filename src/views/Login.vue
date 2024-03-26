@@ -10,8 +10,10 @@ import {
 import { useRouter } from 'vue-router';
 import { CTextField, CButton } from '@luchta-io/cuv'
 import { mdiEye, mdiEyeOff } from '@mdi/js'
+import { useSessionStore } from '@/stores/session';
 
 const router = useRouter()
+const store = useSessionStore()
 
 const data: {
     認証: {
@@ -35,6 +37,10 @@ const ログイン = () => {
             // 成功時処理
             const user = userCredential.user;
             console.log(user);
+            store.setアカウント({
+              アカウントid: user.uid,
+              アカウント名: user.displayName ? user.displayName : ''
+            })
             router.push("/")
        })
        .catch((error) => {
