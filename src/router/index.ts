@@ -85,6 +85,12 @@ const router = createRouter({
       component: () => import('../views/profile/setting/index.vue'),
       meta: { title: "アカウント設定" }
     },
+    {
+      path: '/list',
+      name: 'List',
+      component: () => import('../views/list/index.vue'),
+      meta: { title: "登録" }
+    },
 
   ]
 })
