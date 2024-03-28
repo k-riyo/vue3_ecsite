@@ -20,11 +20,12 @@ const data: {
 
 const 登録 = progress(async () => {
     const postData = {
-        comment: {
-            stringValue: data.入力値
+        fields: {
+            comment: {
+                stringValue: data.入力値
+            }
         }
     }
-    // await コメントを登録(postData)
     await コメントを登録(postData, new Map([
         [400, (error: any) => {
             data.エラー = error.response.data

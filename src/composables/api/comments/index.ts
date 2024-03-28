@@ -1,8 +1,10 @@
 import { type ErrorHandlers, useHttp } from "@/composables/Http"
 
 export type コメント登録型 = {
-    comment: {
-        stringValue: string
+    fields: {
+        comment: {
+            stringValue: string
+        }
     }
 }
 
