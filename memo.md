@@ -5,8 +5,7 @@
 ### インストール
 - vue3
 - axios
-- jest
-- msw (APIがまだない時に作れる)
+- material design icon
 - デザイン系
     - vuetify
     - tailwind
@@ -17,4 +16,6 @@
     - 参考記事：https://yamagata-developers-society.github.io/blog/build-env-codeclimate/
 - sentry 
     - https://docs.sentry.io/platforms/javascript/guides/vue/
-    
+- msw (APIがまだない時に作れる)
+- jest
+
