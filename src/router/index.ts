@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory, type NavigationGuardNext, type RouteLocationNormalized } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 import { useSessionStore } from '@/stores/session'
 import axios from 'axios'
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
@@ -63,15 +62,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
-    },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+      component: () => import('../views/index.vue')
     },
     {
       path: '/login',

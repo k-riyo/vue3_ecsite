@@ -5,6 +5,7 @@ import { useComments } from '@/composables/api/comments'
 import { useMount } from '@/composables/Mount';
 import { useProgress } from '@/composables/Progress';
 import { Error } from '@/composables/Errors';
+import HeaderFooter from '@/components/templates/HeaderFooter.vue'
 
 const { mounted, unMounted } = useMount()
 const { progress } = useProgress()
@@ -37,8 +38,10 @@ mounted(() => { })
 unMounted(() => { })
 </script>
 <template>
-    <div>
-        <CTextField v-model="data.入力値"></CTextField>
-        <CButton @click="登録">登録</CButton>
-    </div>
+    <HeaderFooter>
+        <div>
+            <CTextField v-model="data.入力値"></CTextField>
+            <CButton @click="登録">登録</CButton>
+        </div>
+    </HeaderFooter>
 </template>

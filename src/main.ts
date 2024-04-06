@@ -5,7 +5,7 @@ import '@luchta-io/cuv/style'
 import App from './App.vue'
 import router from './router'
 
-import './assets/main.css'
+import './main.css'
 import "./firebase/firebase"; 
 
 const app = createApp(App)
